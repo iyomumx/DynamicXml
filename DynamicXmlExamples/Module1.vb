@@ -39,8 +39,8 @@ Module Module1
             </Settings>
         Dim dn As Object = New XDynamic(prepare)                            '定义为Object以启用后期绑定
 
-        Dim s = From file In CType(dn.File, IEnumerable).AsParallel
-                            From rr In CType(file.ReplaceRules, IEnumerable)
+        Dim s = From file In CTypeDynamic(Of Object())(dn.File).AsParallel
+                            From rr In CTypeDynamic(Of Object())(file.ReplaceRules)
                             Where CStr(DirectCast(rr.Search, XDynamic)).EndsWith("0") AndAlso
                                   CStr(DirectCast(rr.Replace, XDynamic)).Contains("0")
                 Select New XDynamic(DirectCast(rr, XDynamic))

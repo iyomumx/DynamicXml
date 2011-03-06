@@ -42,13 +42,14 @@ namespace DynamicXmlExampleCS
             var query = from c in (dynamic[])contacts.Contact               //不能用 as dynamic[]
                         where ((string)c.Address.Postal).Contains("0")      //强制转换为String和ToString()方法不同请注意
                         select c.Name;
-            Console.WriteLine(contacts.ToString());
             foreach (var name in query)
             {
                 Console.WriteLine((string)name);
+                name.Sub = "<Add A Sub Node>";
             }
             Console.ReadLine();
-            
+            Console.WriteLine(contacts.ToString());
+            Console.ReadLine();
         }
     }
 }
