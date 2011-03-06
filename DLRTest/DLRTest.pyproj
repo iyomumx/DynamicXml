@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0daec80f-c911-4498-a18e-732fd3f7e0d7}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Program.py</StartupFile>
+    <SearchPath>E:\My Documents\Visual Studio 2010\Projects\DynamicXml\DynamicXml\bin\Debug</SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <AssemblyName>DLRTest</AssemblyName>
+    <Name>DLRTest</Name>
+    <RootNamespace>DLRTest</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Program.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <SearchPath Include="E:\My Documents\Visual Studio 2010\Projects\DynamicXml\DynamicXml\bin\Debug\" />
+  </ItemGroup>
+</Project>
